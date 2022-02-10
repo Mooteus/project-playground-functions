@@ -27,6 +27,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Refatorar depois corrigir erro do eslint
 function highestCount(highNum) {
   let resultHigh = 0;
   let countHigh = 0;
@@ -55,7 +56,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultMouse;
 }
-console.log(catAndMouse(0, 3, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
