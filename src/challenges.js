@@ -13,10 +13,11 @@ function splitSentence(text) {
   let splitText = text.split(' ');
   return splitText;
 }
-console.log(splitSentence('go trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(NamesArray) {
+  let final = NamesArray.length - 1;
+  return `${NamesArray[final]}, ${NamesArray[0]}`;
 }
 
 // Desafio 5
