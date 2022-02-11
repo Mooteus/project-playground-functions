@@ -87,10 +87,15 @@ function encode(text) {
   return text;
 }
 
-function decode() {
-  // seu código aqui
+function decode(text) {
+  text = text.replace(/1/g, 'a');
+  text = text.replace(/2/g, 'e');
+  text = text.replace(/3/g, 'i');
+  text = text.replace(/4/g, 'o');
+  text = text.replace(/5/g, 'u');
+  return text;
 }
-
+console.log(decode('h3 th2r2!'));
 // Desafio 10
 function techList() {
   // seu código aqui
