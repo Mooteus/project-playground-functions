@@ -29,27 +29,32 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function countHigh(highNum, resultHigh) {
   let count = 0;
+
   for (let i in highNum) {
     if (highNum[i] === resultHigh) {
       count += 1;
     }
   }
+
   return count;
 }
 
 function highestCount(highNum) {
   let resultHigh = 0;
+
   for (let i in highNum) {
     if (i > resultHigh) {
       resultHigh = highNum[i];
     }
   }
+
   return countHigh(highNum, resultHigh);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultMouse = '';
+
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     resultMouse = 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
@@ -59,24 +64,34 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     resultMouse = null;
   }
+
   return resultMouse;
 }
 
 // Desafio 8
-//refatorar depois
+function fizzBuzzverify(num) {
+  let result = '';
+
+  if (num % 3 === 0 && num % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (num % 3 === 0) {
+    result = 'fizz';
+  } else if (num % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+
+  return result;
+}
+
 function fizzBuzz(arrayNum) {
   let arrayResult = [];
-  for (let i in arrayNum) {
-    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
-      arrayResult[i] = 'fizzBuzz';
-    } else if (arrayNum[i] % 3 === 0) {
-      arrayResult[i] = 'fizz';
-    } else if (arrayNum[i] % 5 === 0) {
-      arrayResult[i] = 'buzz';
-    } else {
-      arrayResult[i] = 'bug!';
-    }
+
+  for (let num of arrayNum) {
+    arrayResult.push(fizzBuzzverify(num));
   }
+
   return arrayResult;
 }
 
@@ -98,16 +113,20 @@ function decode(text) {
   text = text.replace(/5/g, 'u');
   return text;
 }
+
 // Desafio 10
 function techList(arrayTech, nameText) {
   if (arrayTech.length === 0) {
     return 'Vazio!';
   }
+
   arrayTech = arrayTech.sort();
   let techObj = [];
+
   for (let i of arrayTech) {
     techObj.push({ tech: i, name: nameText });
   }
+
   return techObj;
 }
 
