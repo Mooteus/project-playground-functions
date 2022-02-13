@@ -54,7 +54,6 @@ function triangleCheck(sideA, sideB, sideC) {
   }
   return true;
 }
-console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
