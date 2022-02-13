@@ -54,11 +54,23 @@ function triangleCheck(sideA, sideB, sideC) {
   }
   return true;
 }
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(stringBeer) {
+  let waterGlass = stringBeer.match(/\d+/g);
+  let waterGlassResult = 0;
+  for (let glasses of waterGlass) {
+    waterGlassResult += parseInt(glasses, 10);
+  }
+  if (waterGlassResult === 1) {
+    return `${waterGlassResult} copo de água`;
+  }
+  return `${waterGlassResult} copos de água`;
+}
+/*
+    Ao utilizar o ".match" usei esse artigo do stackOverFlow como referencia :
+    https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+*/
 module.exports = {
   generatePhoneNumber,
   hydrate,
