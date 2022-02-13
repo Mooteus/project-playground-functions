@@ -1,7 +1,7 @@
 // Desafio 11
 function phoneInvalid(numArray) {
   let countList = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  
+
   for (let i of numArray) {
     if (countList[i] >= 2 || i < 0 || i > 9) {
       return true;
@@ -35,10 +35,26 @@ function generatePhoneNumber(arrayPhone) {
 */
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function absCheck(sideA, sideB, sideC) {
+  let ab = sideA - sideB;
+  let ac = sideA - sideC;
+  let bc = sideB - sideC;
+  if (Math.abs(ab) >= sideC && Math.abs(ac) >= sideB && Math.abs(bc) >= sideA) {
+    return false;
+  }
+  return true;
 }
 
+function triangleCheck(sideA, sideB, sideC) {
+  if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+    return false;
+  }
+  if (!absCheck(sideA, sideB, sideC)) {
+    return false;
+  }
+  return true;
+}
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
