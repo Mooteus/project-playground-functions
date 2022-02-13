@@ -27,21 +27,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Refatorar depois corrigir erro do eslint
+function countHigh(highNum, resultHigh) {
+  let count = 0;
+  for (let i in highNum) {
+    if (highNum[i] === resultHigh) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 function highestCount(highNum) {
   let resultHigh = 0;
-  let countHigh = 0;
   for (let i in highNum) {
     if (i > resultHigh) {
       resultHigh = highNum[i];
     }
   }
-  for (let i in highNum) {
-    if (highNum[i] === resultHigh) {
-      countHigh += 1;
-    }
-  }
-  return countHigh;
+  return countHigh(highNum, resultHigh);
 }
 
 // Desafio 7
